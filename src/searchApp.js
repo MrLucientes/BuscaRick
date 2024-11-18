@@ -53,13 +53,7 @@ class SearchApp extends TeamsActivityHandler {
         // Combine Hero Card and Adaptive Card in the attachment
         return { ...CardFactory.adaptiveCard(card), preview };
       });
-      const tarjeta=  data = {
-          id: character.id,
-            name: character.name,
-            status: character.status,
-            gender: character.gender,
-            species: character.species,
-        }
+    
       // Return the results using the attachments
       return {
         composeExtension: {
