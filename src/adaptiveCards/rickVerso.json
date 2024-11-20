@@ -26,8 +26,8 @@
                         {
                             "type": "Image",
                             "url": "https://rickandmortyapi.com/api/character/avatar/${id}.jpeg",
-                            "width": "80px",
-                            "height": "80px",
+                            "width": "100px",
+                            "height": "100px",
                             "style": "Person",
                             "altText": "Avatar del personaje"
                         }
@@ -36,15 +36,16 @@
                 {
                     "type": "Column",
                     "width": "stretch",
-                    "spacing": "Medium",
                     "verticalContentAlignment": "Center",
                     "items": [
                         {
                             "type": "TextBlock",
                             "text": "${name}",
-                            "wrap": true
+                            "wrap": true,
+                            "weight": "Default"
                         }
-                    ]
+                    ],
+                    "spacing": "Small"
                 }
             ]
         },
@@ -94,16 +95,16 @@
                     "iconUrl": "icon:AlertUrgent"
                 },
                 {
-                    "type": "Action.Submit",
+                    "type": "Action.Execute",
                     "title": "Registrar",
-                    "id": "submit",
+                    "verb": "submit",
+                    "id"   : "iDsubmit",
                     "data": {
-                        "id": "${id}",
                         "name": "${name}",
                         "status": "${status}",
                         "gender": "${gender}",
                         "species": "${species}",
-                        "cardTypeId": "rickoria"
+                        "url": "${url}"
                     }
                 }
             ]
