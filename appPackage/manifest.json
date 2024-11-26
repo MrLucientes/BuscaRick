@@ -1,7 +1,7 @@
 {
     "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.17/MicrosoftTeams.schema.json",
     "manifestVersion": "1.17",
-    "version": "1.0.8",
+    "version": "1.1.0",
     "id": "${{TEAMS_APP_ID}}",
     "developer": {
         "name": "Teams App, Inc.",
@@ -25,7 +25,7 @@
     "bots": [
         {
             "botId": "${{BOT_ID}}",
-            "scopes": ["personal", "team"],
+            "scopes": ["personal", "team","groupChat"],
             "supportsFiles": false,
             "isNotificationOnly": false
         }
@@ -63,7 +63,6 @@
         "messageTeamMembers"
     ],
     "validDomains": [
-        "token.botframework.com",
-        "*.botframework.com"
+    
     ]
 }

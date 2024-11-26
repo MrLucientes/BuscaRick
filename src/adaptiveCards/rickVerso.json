@@ -99,12 +99,16 @@
                     "title": "Registrar",
                     "verb": "submit",
                     "id"   : "iDsubmit",
+                    "fallback": "drop",
                     "data": {
                         "name": "${name}",
                         "status": "${status}",
                         "gender": "${gender}",
                         "species": "${species}",
-                        "url": "${url}"
+                        "url": "${url}",
+                        "id":"${id}",
+                        "chatId":"${chatId}",
+                        "cardTypeId":"${id}"
                     }
                 }
             ]
