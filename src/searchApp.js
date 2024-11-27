@@ -3,7 +3,8 @@ const querystring = require("querystring");
 const { TeamsActivityHandler, CardFactory } = require("botbuilder");
 const ACData = require("adaptivecards-templating");
 const rickVerso = require("./adaptiveCards/rickVerso.json");
-const rickspuesta = require("./adaptiveCards/rickspuesta.json");
+const aLaEspera = require("./adaptiveCards/aLaEspera.json");
+//const rickspuesta = require("./adaptiveCards/rickspuesta.json");
 
 class SearchApp extends TeamsActivityHandler {
   constructor() {
@@ -80,7 +81,7 @@ class SearchApp extends TeamsActivityHandler {
   async handleTeamsCardActionInvoke(context, query) {
     const currentDate = new Date().toLocaleString(); 
     const chatId = context.activity.conversation.id;
-    const messageId = context.activity.Id;
+    //const messageId = context.activity.Id;
     console.log("****ID****:", context.activity);
     const { action } = query;
     if (action && action.type === "Action.Execute") {
@@ -96,10 +97,9 @@ class SearchApp extends TeamsActivityHandler {
             url: actionData.url,
             currentDate: currentDate,
             chatId: chatId,
-            messageId: messageId,
             
         };
-
+        console.log("DATA: ",data)
         const powerAutomateUrl = 'https://prod-126.westeurope.logic.azure.com:443/workflows/145db6991898427caeccd191b0663178/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=jtR2_8lifTZd9oeo9KEHhxHv8rUtN7SOnpJH6Zv2iNI';
 
         try {
@@ -128,7 +128,7 @@ class SearchApp extends TeamsActivityHandler {
 
 // Método para crear y enviar la tarjeta adaptativa
 async createAndSendAdaptiveCard(context, data) {
-    const template = new ACData.Template(rickspuesta);
+    const template = new ACData.Template(aLaEspera);
     const newcard = template.expand({
         $root: data
     });

@@ -88,7 +88,7 @@
                     "items": [
                         {
                             "type": "Image",
-                            "url": "https://rickandmortyapi.com/api/character/avatar/@{triggerBody()?['id']}.jpeg",
+                            "url": "https://rickandmortyapi.com/api/character/avatar/${id}.jpeg",
                             "width": "100px",
                             "height": "100px",
                             "style": "Person",

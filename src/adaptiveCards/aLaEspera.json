@@ -1,0 +1,63 @@
+{
+    "type": "AdaptiveCard",
+    "speak": "3 minute energy flow with kayo video",
+    "version": "1.5",
+    "body": [
+        {
+            "type": "Media",
+            "sources": [
+                {
+                    "mimeType": "video/mp4",
+                    "url": "https://www.youtube.com/watch?v=b1H3xO3x_Js"
+                }
+            ]
+        },
+        {
+            "type": "TextBlock",
+            "text": "Petición Enviada",
+            "wrap": true,
+            "size": "Large",
+            "weight": "Bolder"
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "url": "https://res-1.cdn.office.net/assets/adaptive-cards/samples/author-highlight-video/assets/avatar.png",
+                            "width": "24px",
+                            "height": "24px",
+                            "style": "Person",
+                            "altText": "Avatar of Kayo Miwa"
+                        }
+                    ],
+                    "verticalContentAlignment": "Center"
+                },
+                {
+                    "type": "Column",
+                    "width": "stretch",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "Kayo Miwa",
+                            "wrap": true
+                        }
+                    ],
+                    "spacing": "Small",
+                    "verticalContentAlignment": "Center"
+                }
+            ]
+        },
+        {
+            "type": "TextBlock",
+            "targetWidth": "AtLeast:Narrow",
+            "text": "***Su petición ha sido enviada al canal del grupo***, mientras esperas a que lo aprueben puedes dedicarle 3 minutos a Energy Flow with Kayo. (Como los de microsoft son unos falsos y habian puesto una foto de un video en vez de un video de verdad, he colocado un video random de yoga, disfrutalo)",
+            "wrap": true
+        }
+    ],
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
+}
