@@ -81,6 +81,7 @@ class SearchApp extends TeamsActivityHandler {
   async handleTeamsCardActionInvoke(context, query) {
     const currentDate = new Date().toLocaleString(); 
     const chatId = context.activity.conversation.id;
+    const pushName = context.activity.from.name;
     //const messageId = context.activity.Id;
     console.log("****ID****:", context.activity);
     const { action } = query;
@@ -97,6 +98,7 @@ class SearchApp extends TeamsActivityHandler {
             url: actionData.url,
             currentDate: currentDate,
             chatId: chatId,
+            pushName:pushName 
             
         };
         console.log("DATA: ",data)

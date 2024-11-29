@@ -1,0 +1,71 @@
+openapi: 3.0.0
+info:
+  title: Rick and Morty API
+  version: 1.0.0
+  description: API para buscar personajes de Rick y Morty
+paths:
+  /api/character:
+    get:
+      summary: Obtiene personajes de Rick y Morty
+      description: Busca personajes según el nombre
+      parameters:
+        - name: name
+          in: query
+          description: Nombre del personaje para buscar
+          required: true
+          schema:
+            type: string
+            example: "Rick"
+      responses:
+        '200':
+          description: Lista de personajes encontrados
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  info:
+                    type: object
+                    properties:
+                      count:
+                        type: integer
+                        example: 20
+                      pages:
+                        type: integer
+                        example: 2
+                  results:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          example: 1
+                        name:
+                          type: string
+                          example: "Rick Sanchez"
+                        status:
+                          type: string
+                          example: "Alive"
+                        species:
+                          type: string
+                          example: "Human"
+                        gender:
+                          type: string
+                          example: "Male"
+                        image:
+                          type: string
+                          example: "https://rickandmortyapi.com/api/character/avatar/1.jpeg"
+                        url:
+                          type: string
+                          example: "https://rickandmortyapi.com/api/character/1"
+        '400':
+          description: Error de búsqueda, parámetro incorrecto o ausencia de resultados
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "No se encontraron personajes con ese nombre."

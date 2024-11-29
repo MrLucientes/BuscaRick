@@ -1,7 +1,7 @@
 {
     "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.17/MicrosoftTeams.schema.json",
     "manifestVersion": "1.17",
-    "version": "1.2.0",
+    "version": "1.2.1",
     "id": "${{TEAMS_APP_ID}}",
     "developer": {
         "name": "Teams App, Inc.",
@@ -15,11 +15,11 @@
     },
     "name": {
         "short": "buscaRick${{APP_NAME_SUFFIX}}",
-        "full": "full name for buscaRick"
+        "full": "Buscador buscaRick"
     },
     "description": {
-        "short": "short description of buscaRick",
-        "full": "full description of buscaRick"
+        "short": "Search characters",
+        "full": "This bot allows users to search and explore detailed information about characters from a custom database, seamlessly integrating with Microsoft Teams and Copilot. It enables quick character searches by name, key attributes, or specific categories, presenting organized data such as biographies, statistics, and relevant details. The bot also generates automated summaries to provide clear overviews of character groups or related data, enhancing decision-making and analysis. Fully compatible with Microsoft Copilot, users can ask contextual questions or request summaries directly within conversations or workflows, making it an ideal tool for teams managing large volumes of character-related information efficiently"
     },
     "accentColor": "#FFFFFF",
     "bots": [
@@ -27,7 +27,7 @@
             "botId": "${{BOT_ID}}",
             "scopes": ["personal", "team","groupChat"],
             "supportsFiles": false,
-            "isNotificationOnly": false
+            "isNotificationOnly": false 
         }
     ],
     "composeExtensions": [
@@ -41,14 +41,26 @@
                         "commandBox",
                         "message"
                     ],
-                    "description": "Test command to run query",
+                    "description": "Search characters from a online database",
                     "title": "Search",
                     "type": "query",
                     "parameters": [
                         {
                             "name": "searchQuery",
                             "title": "Search Query",
-                            "description": "Your search query",
+                            "description": "The name of the character as a keyword",
+                            "inputType": "text"
+                        },
+                        {
+                            "name": "statuscharacter",
+                            "title": "Status character",
+                            "description": "The status of the character to sort between two options",
+                            "inputType": "text"
+                        },
+                        {
+                            "name": "sourcecharacter",
+                            "title": "Source character",
+                            "description": "The planet where the character to born",
                             "inputType": "text"
                         }
                     ]
