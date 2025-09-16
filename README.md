@@ -48,7 +48,7 @@ The following are Teams Toolkit specific project files. You can [visit a complet
 
 
 ## Bot Example
-![BuscaRick bot demo](https://github.com/MrLucientes/BuscaRick/blob/main/BuscaRick-%20muestra-VEED.mp4)
+![BuscaRick bot demo](https://www.veed.io/view/99404ae3-6675-4294-b2c3-fe44da8de3f6?panel=share)
 
 ## Extend the template
 
