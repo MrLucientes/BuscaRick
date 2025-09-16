@@ -19,7 +19,7 @@ This app template is a search-based [message extension](https://docs.microsoft.c
 
 **Congratulations**! You are running an application that can now search npm registries in Teams App Test Tool.
 
-![Search app demo](https://github.com/OfficeDev/TeamsFx/assets/9698542/5275e5bc-492f-4365-b602-5803938a9780)
+![Search app demo](https://www.veed.io/view/99404ae3-6675-4294-b2c3-fe44da8de3f6?panel=share)
 
 ## What's included in the template
 
